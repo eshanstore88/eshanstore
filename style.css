@@ -1,0 +1,163 @@
+:root {
+    --bg-black: #050505;
+    --spider-red: #e50914;
+    --white: #ffffff;
+    --grey: #cccccc;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-black);
+    color: var(--grey);
+    font-family: 'Outfit', sans-serif;
+    overflow-x: hidden;
+    cursor: default;
+}
+
+/* PURE WHITE TEXT */
+.text-pure-white { color: #ffffff !important; }
+
+/* RED GRADIENT */
+.text-gradient-red {
+    background: linear-gradient(180deg, #ff1e27 0%, #aa0000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Typography */
+.hero-text { font-family: 'Archivo Black', sans-serif; font-size: clamp(40px, 8vw, 100px); line-height: 1; text-transform: uppercase; }
+.section-title { font-family: 'Archivo Black', sans-serif; font-size: clamp(30px, 4vw, 60px); text-align: center; margin-bottom: 50px; letter-spacing: 2px;}
+
+/* 1. SMOOTH GLOWING CURSOR (NO DOTS) */
+#cursor-glow {
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(229, 9, 20, 0.15) 0%, rgba(0, 0, 0, 0) 60%);
+    border-radius: 50%; position: fixed; pointer-events: none;
+    transform: translate(-50%, -50%); z-index: 1;
+}
+
+/* Hide custom cursor on mobile */
+@media (max-width: 768px) { #cursor-glow { display: none; } }
+
+/* 2. SLIM & SMOOTH ZIGZAG DIVIDER */
+.zigzag-divider {
+    width: 100%; height: 10px; margin: 40px 0; opacity: 0.8;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="10" viewBox="0 0 40 10"><path d="M0 5 L10 0 L20 5 L30 10 L40 5" fill="none" stroke="%23e50914" stroke-width="2"/><path d="M0 5 L10 10 L20 5 L30 0 L40 5" fill="none" stroke="%23ffffff" stroke-width="1"/></svg>') repeat-x;
+    animation: slide-zigzag 10s linear infinite;
+}
+@keyframes slide-zigzag { 0% { background-position: 0 0; } 100% { background-position: 200px 0; } }
+
+/* Navbar */
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 5%; position: sticky; top: 0;
+    background: rgba(5, 5, 5, 0.85); backdrop-filter: blur(15px); z-index: 100;
+}
+.logo { font-family: 'Archivo Black', sans-serif; font-size: clamp(20px, 3vw, 32px); letter-spacing: 1px;}
+.btn-whatsapp {
+    background: var(--white); color: var(--bg-black); font-weight: 800;
+    padding: 10px 20px; border-radius: 50px; text-decoration: none; transition: 0.3s;
+}
+.btn-whatsapp:hover { background: var(--spider-red); color: var(--white); }
+
+/* Hero */
+.hero { height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+.hero-sub { margin-top: 25px; font-size: clamp(14px, 2vw, 22px); font-weight: 800; letter-spacing: 2px; }
+
+/* Ticker Tape */
+.ticker-container { background: var(--spider-red); padding: 15px 0; overflow: hidden; }
+.ticker-wrapper { display: flex; white-space: nowrap; animation: scroll-left 20s linear infinite; }
+.ticker-wrapper span { font-family: 'Archivo Black', sans-serif; font-size: 18px; padding: 0 30px; letter-spacing: 2px; color: var(--white);}
+
+/* Why Choose Us Slider */
+.why-us { padding: 80px 0 20px; text-align: center; overflow: hidden; }
+.slider-container { width: 100%; overflow: hidden; padding: 20px 0; }
+.slider-track { display: flex; gap: 30px; width: max-content; animation: scroll-left 15s linear infinite; cursor: grab; }
+.slider-track:active { cursor: grabbing; }
+.slider-box {
+    background: #111; width: 280px; height: 180px; border-radius: 20px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px;
+    border: 1px solid rgba(255,255,255,0.08); transition: 0.3s;
+}
+.slider-box i { font-size: 45px; color: var(--spider-red); }
+.slider-box h3 { font-family: 'Archivo Black', sans-serif; font-size: 20px; }
+.slider-box:hover { border-color: var(--spider-red); transform: scale(1.05); }
+
+/* Categories Grid */
+.categories { padding: 60px 5%; max-width: 1400px; margin: 0 auto;}
+.cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.cat-card {
+    background: rgba(17, 17, 17, 0.8); padding: 40px; border-radius: 20px; text-align: center;
+    border: 1px solid rgba(255,255,255,0.08); transition: 0.4s; position: relative; z-index: 10;
+}
+.cat-card:hover { border-color: var(--spider-red); transform: translateY(-10px); }
+.cat-card i { font-size: 45px; color: var(--spider-red); margin-bottom: 20px; }
+.cat-card h3 { font-family: 'Archivo Black', sans-serif; font-size: 28px; margin-bottom: 10px;}
+.cat-card p { margin-bottom: 20px; font-size: 16px;}
+.price { font-family: 'Archivo Black', sans-serif; font-size: 35px; margin-bottom: 30px; }
+.price span { font-size: 20px; color: var(--spider-red); }
+.buy-btn {
+    display: block; background: var(--white); color: var(--bg-black);
+    padding: 15px; border-radius: 10px; text-decoration: none; font-weight: 800; transition: 0.3s;
+}
+.cat-card:hover .buy-btn { background: var(--spider-red); color: var(--white); }
+
+/* Reviews Marquee */
+.reviews-section { padding: 60px 0; background: #080808; border-top: 1px solid #222; border-bottom: 1px solid #222;}
+.marquee-container { overflow: hidden; width: 100%; }
+.marquee-track { display: flex; gap: 30px; width: max-content; animation: scroll-left 25s linear infinite; }
+.review-card {
+    background: #111; border: 1px solid #333; padding: 30px; border-radius: 15px;
+    width: clamp(280px, 80vw, 380px); flex-shrink: 0; box-shadow: inset 0 0 20px rgba(255,255,255,0.02);
+}
+.review-card p { font-size: 16px; font-style: italic; margin-bottom: 15px; }
+.review-card h4 { color: var(--spider-red); font-weight: 800; font-family: 'Archivo Black', sans-serif; font-size: 16px;}
+
+/* Crazy FAQs */
+.faqs { padding: 100px 5%; max-width: 900px; margin: 0 auto; position: relative; z-index: 10;}
+.faq-item {
+    background: #111; margin-bottom: 20px; border-radius: 15px; border: 1px solid #333;
+    overflow: hidden; cursor: pointer; transition: 0.4s;
+}
+.faq-question {
+    padding: 20px; display: flex; justify-content: space-between; align-items: center;
+    font-size: clamp(16px, 3vw, 22px); font-weight: 800;
+}
+.faq-question h3 { margin: 0; }
+.faq-question i { color: var(--spider-red); transition: transform 0.5s ease; font-size: 20px;}
+.faq-answer { max-height: 0; padding: 0 20px; opacity: 0; transition: 0.5s; }
+.faq-item.active { background: #150000; border-color: var(--spider-red); transform: scale(1.02); }
+.faq-item.active .faq-answer { max-height: 200px; opacity: 1; padding-bottom: 20px; }
+.faq-item.active .faq-question i { transform: rotate(135deg); color: var(--white); }
+
+/* PRO Savage Footer CTA */
+.pro-savage-cta { padding: 80px 5% 120px; display: flex; justify-content: center; position: relative; z-index: 10;}
+.cta-box {
+    background: rgba(15, 15, 15, 0.9); border: 1px solid #333; padding: 60px 40px;
+    border-radius: 30px; text-align: center; max-width: 900px; width: 100%;
+    position: relative; overflow: hidden;
+}
+.cta-box::before {
+    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 5px;
+    background: var(--spider-red);
+}
+.red-dot {
+    width: 12px; height: 12px; background: var(--spider-red); border-radius: 50%;
+    margin: 0 auto 20px; box-shadow: 0 0 15px var(--spider-red);
+}
+.cta-title { font-family: 'Archivo Black', sans-serif; font-size: clamp(24px, 5vw, 45px); line-height: 1.2; margin-bottom: 20px;}
+.cta-sub { font-size: clamp(14px, 2vw, 18px); color: var(--grey); margin-bottom: 40px; font-weight: 600;}
+.btn-order-here {
+    display: inline-flex; align-items: center; gap: 10px; background: var(--white); color: var(--bg-black);
+    font-family: 'Archivo Black', sans-serif; font-size: clamp(18px, 3vw, 24px);
+    padding: 15px 40px; border-radius: 100px; text-decoration: none; transition: 0.4s ease;
+}
+.btn-order-here:hover {
+    background: var(--spider-red); color: var(--white); transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(229, 9, 20, 0.4);
+}
+
+.bottom-footer { text-align: center; padding: 30px; border-top: 1px solid #222; font-size: 14px; font-weight: 600; position: relative; z-index: 10;}
+
+@keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
