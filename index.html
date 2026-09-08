@@ -1,146 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ESHAN STORE | Premium Digital Tools</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c0c0e">
+  <meta name="description" content="Upgrade your digital life with Eshan Store. Explore entertainment subscriptions from PKR 99, AI tools and VPNs from PKR 299. Order on WhatsApp.">
+  <title>ESHAN STORE — Your digital life, upgraded.</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="assets/gsap.min.js"></script>
+  <script defer src="assets/ScrollTrigger.min.js"></script>
+  <script defer src="assets/lenis.min.js"></script>
+  <script defer src="script.js"></script>
 </head>
 <body>
-
-    <div id="cursor-glow"></div>
-
-    <nav class="navbar">
-        <div class="logo text-pure-white">ESHAN <span class="text-gradient-red">STORE</span></div>
-        <a href="https://wa.me/923003154611" target="_blank" class="btn-whatsapp">
-            <i class="fa-brands fa-whatsapp text-xl"></i> Contact
-        </a>
-    </nav>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-text">
-                <span class="text-pure-white line-1">WELCOME TO</span><br>
-                <span class="text-gradient-red line-2">ESHAN STORE</span>
-            </h1>
-            <p class="hero-sub fade-up text-pure-white">PREMIUM TOOLS. UNBEATABLE PRICES. 💯</p>
+  <a class="skip-link" href="#collection">Skip to subscriptions</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <header class="header">
+    <a class="wordmark" href="#top" aria-label="Eshan Store home"><span class="brand-mark" aria-hidden="true">e.</span><span>ESHAN<span class="brand-store">STORE</span></span></a>
+    <nav class="desktop-nav" aria-label="Main navigation"><a href="#collection">The collection</a><a href="#why">Why Eshan</a><a href="#reviews">Reviews</a><a href="#faq">FAQs</a></nav>
+    <a class="contact-link" href="https://wa.me/923003154611" target="_blank" rel="noopener noreferrer">Let’s talk <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-topline"><span>PREMIUM ACCESS. EVERYDAY PRICES.</span><span class="hero-location">MADE FOR YOUR DIGITAL LIFE</span></div>
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow hero-intro"><span class="tiny-cross" aria-hidden="true">✳</span> A LITTLE UPGRADE. A LOT MORE POSSIBLE.</p>
+          <h1 id="hero-title"><span class="line-wrap"><span>Your digital life.</span></span><span class="line-wrap"><span class="hero-emphasis">UPGRADED.</span></span></h1>
+          <p class="hero-description">Stream your favourites. Create without limits.<br>Get more from the tools you love, for less.</p>
+          <div class="hero-actions"><a class="button button-red magnetic" href="#collection">Explore the collection <span aria-hidden="true">↗</span></a><span class="hero-price">Premium starts at<br><strong>PKR 99</strong></span></div>
         </div>
+        <div class="hero-visual" aria-hidden="true"><img class="hero-art" src="assets/hero.webp" width="1536" height="1024" alt="" fetchpriority="high"><div class="art-caption"><span>LESS SPEND.</span><span>MORE POSSIBILITIES.</span></div><span class="art-index">ES / 01</span></div>
+      </div>
+      <div class="hero-bottom"><p><span class="mini-icon" aria-hidden="true">↗</span> Fast delivery <span class="separator">/</span> WhatsApp support <span class="separator">/</span> Local payments</p><a href="#collection" class="scroll-cue">SCROLL TO UPGRADE <span aria-hidden="true">↓</span></a></div>
     </section>
-
-    <div class="ticker-container">
-        <div class="ticker-wrapper">
-            <span>CHATGPT • NETFLIX • PRIME VIDEO • GROK AI • SURFSHARK • NORD VPN • ADOBE • YOUTUBE PREMIUM • DISNEY • </span>
-            <span>CHATGPT • NETFLIX • PRIME VIDEO • GROK AI • SURFSHARK • NORD VPN • ADOBE • YOUTUBE PREMIUM • DISNEY • </span>
-        </div>
-    </div>
-
-    <section class="why-us">
-        <h2 class="section-title text-pure-white">WHY CHOOSE US</h2>
-        <div class="slider-container">
-            <div class="slider-track" id="sliderTrack">
-                <div class="slider-box"><i class="fa-solid fa-bolt-lightning"></i><h3 class="text-pure-white">Instant Delivery</h3></div>
-                <div class="slider-box"><i class="fa-solid fa-shield-halved"></i><h3 class="text-pure-white">100% Warranty</h3></div>
-                <div class="slider-box"><i class="fa-solid fa-headset"></i><h3 class="text-pure-white">24/7 Support</h3></div>
-                <div class="slider-box"><i class="fa-solid fa-tag"></i><h3 class="text-pure-white">Lowest Rates</h3></div>
-                <div class="slider-box"><i class="fa-solid fa-star"></i><h3 class="text-pure-white">Trusted Seller</h3></div>
-                <div class="slider-box"><i class="fa-solid fa-bolt-lightning"></i><h3 class="text-pure-white">Instant Delivery</h3></div>
-                <div class="slider-box"><i class="fa-solid fa-shield-halved"></i><h3 class="text-pure-white">100% Warranty</h3></div>
-                <div class="slider-box"><i class="fa-solid fa-headset"></i><h3 class="text-pure-white">24/7 Support</h3></div>
-                <div class="slider-box"><i class="fa-solid fa-tag"></i><h3 class="text-pure-white">Lowest Rates</h3></div>
-                <div class="slider-box"><i class="fa-solid fa-star"></i><h3 class="text-pure-white">Trusted Seller</h3></div>
-            </div>
-        </div>
+    <div class="brands-band" aria-label="Subscriptions include ChatGPT, Netflix, Spotify, Adobe, NordVPN, and YouTube Premium"><div class="brand-track" aria-hidden="true"><div class="brand-set"><span>ChatGPT</span><i>✳</i><span class="netflix-type">NETFLIX</span><i>✳</i><span>Spotify</span><i>✳</i><span>Adobe</span><i>✳</i><span>NordVPN</span><i>✳</i><span>YouTube Premium</span><i>✳</i></div><div class="brand-set"><span>ChatGPT</span><i>✳</i><span class="netflix-type">NETFLIX</span><i>✳</i><span>Spotify</span><i>✳</i><span>Adobe</span><i>✳</i><span>NordVPN</span><i>✳</i><span>YouTube Premium</span><i>✳</i></div></div></div>
+    <section class="collection section-space" id="collection" aria-labelledby="collection-title">
+      <div class="section-top reveal"><p class="eyebrow">01 / THE COLLECTION</p><span class="section-note">YOUR NEXT UPGRADE STARTS HERE</span></div>
+      <div class="section-heading reveal"><h2 id="collection-title">Big possibilities.<br><span class="muted">Small prices.</span></h2><p>All your digital essentials, in one place.<br>Choose your category. We’ll handle the rest.</p></div>
+      <div class="product-grid">
+        <article class="product-card entertainment reveal"><div class="card-top"><span class="eyebrow">01 / PRESS PLAY</span><span class="category-symbol" aria-hidden="true">▷</span></div><h3>Entertainment<span>.</span></h3><p>Your next obsession is one play away.</p><div class="service-list"><span>Netflix</span><span>Spotify</span><span>YouTube Premium</span></div><div class="card-graphic play-graphic" aria-hidden="true"><span>PLAY.</span><small>WATCH · LISTEN · REPEAT</small></div><div class="product-bottom"><div><span class="from-label">STARTING FROM</span><p class="price"><span>PKR</span> 99</p></div><a class="circle-link" href="https://wa.me/923003154611?text=Hello%20Eshan!%20I%20want%20an%20Entertainment%20subscription.%20Please%20share%20available%20plans%2C%20duration%2C%20and%20prices." target="_blank" rel="noopener noreferrer" aria-label="Order an Entertainment subscription on WhatsApp">↗</a></div><a class="card-text-link" href="https://wa.me/923003154611?text=Hello%20Eshan!%20Please%20share%20your%20Entertainment%20plans." target="_blank" rel="noopener noreferrer">Explore entertainment <span aria-hidden="true">↗</span></a></article>
+        <article class="product-card ai reveal"><div class="card-top"><span class="eyebrow">02 / THINK BIGGER</span><span class="category-symbol" aria-hidden="true">✳</span></div><h3>AI & creative<span>.</span></h3><p>Less busywork. More brilliant ideas.</p><div class="service-list"><span>ChatGPT Plus</span><span>Canva Pro</span><span>Claude</span></div><div class="card-graphic create-graphic" aria-hidden="true"><span>CREATE.</span><small>THINK · MAKE · DO MORE</small></div><div class="product-bottom"><div><span class="from-label">STARTING FROM</span><p class="price"><span>PKR</span> 299</p></div><a class="circle-link" href="https://wa.me/923003154611?text=Hello%20Eshan!%20I%20want%20an%20AI%20or%20creative%20tool.%20Please%20share%20available%20plans%2C%20duration%2C%20and%20prices." target="_blank" rel="noopener noreferrer" aria-label="Order an AI or creative tool on WhatsApp">↗</a></div><a class="card-text-link" href="https://wa.me/923003154611?text=Hello%20Eshan!%20Please%20share%20your%20AI%20and%20creative%20tool%20plans." target="_blank" rel="noopener noreferrer">Explore AI & creative <span aria-hidden="true">↗</span></a></article>
+        <article class="product-card vpn reveal"><div class="card-top"><span class="eyebrow">03 / GO PRIVATE</span><span class="category-symbol" aria-hidden="true">◎</span></div><h3>Premium VPNs<span>.</span></h3><p>A little more privacy. A lot more freedom.</p><div class="service-list"><span>Surfshark</span><span>NordVPN</span><span>IPVanish</span></div><div class="card-graphic vpn-graphic" aria-hidden="true"><span>EXPLORE.</span><small>CONNECT · BROWSE · UNWIND</small></div><div class="product-bottom"><div><span class="from-label">STARTING FROM</span><p class="price"><span>PKR</span> 299</p></div><a class="circle-link" href="https://wa.me/923003154611?text=Hello%20Eshan!%20I%20want%20a%20Premium%20VPN.%20Please%20share%20available%20plans%2C%20duration%2C%20and%20prices." target="_blank" rel="noopener noreferrer" aria-label="Order a Premium VPN on WhatsApp">↗</a></div><a class="card-text-link" href="https://wa.me/923003154611?text=Hello%20Eshan!%20Please%20share%20your%20VPN%20plans." target="_blank" rel="noopener noreferrer">Explore VPNs <span aria-hidden="true">↗</span></a></article>
+      </div>
+      <p class="collection-footnote">Prices vary by service and plan. Confirm duration, availability, access type, and warranty on WhatsApp before payment.</p>
     </section>
-
-    <div class="zigzag-divider"></div>
-
-    <section class="categories">
-        <h2 class="section-title text-pure-white">OUR PREMIUM TOOLS</h2>
-        <div class="cat-grid">
-            <div class="cat-card scroll-card">
-                <i class="fa-solid fa-play"></i>
-                <h3 class="text-pure-white">Entertainment</h3>
-                <p>Netflix, Spotify, YouTube Premium.</p>
-                <div class="price text-pure-white">From <span>99 PKR</span></div>
-                <a href="https://wa.me/923003154611?text=Hello%20Eshan!%20I%20want%20to%20buy%20an%20Entertainment%20Subscription." target="_blank" class="buy-btn">Buy Now</a>
-            </div>
-            <div class="cat-card scroll-card">
-                <i class="fa-solid fa-bolt"></i>
-                <h3 class="text-pure-white">AI Tools</h3>
-                <p>ChatGPT Plus, Canva Pro, Claude.</p>
-                <div class="price text-pure-white">From <span>299 PKR</span></div>
-                <a href="https://wa.me/923003154611?text=Hello%20Eshan!%20I%20want%20to%20buy%20Premium%20AI%20Tools." target="_blank" class="buy-btn">Buy Now</a>
-            </div>
-            <div class="cat-card scroll-card">
-                <i class="fa-solid fa-shield"></i>
-                <h3 class="text-pure-white">Premium VPNs</h3>
-                <p>Surfshark, Nord VPN, IPVanish.</p>
-                <div class="price text-pure-white">From <span>299 PKR</span></div>
-                <a href="https://wa.me/923003154611?text=Hello%20Eshan!%20I%20want%20to%20buy%20a%20Premium%20VPN." target="_blank" class="buy-btn">Buy Now</a>
-            </div>
-        </div>
-    </section>
-
-    <div class="zigzag-divider"></div>
-
-    <section class="reviews-section">
-        <div class="marquee-container">
-            <div class="marquee-track">
-                <div class="review-card"><p class="text-pure-white">"Bhai maza aa gaya, Netflix premium instantly mil gaya. Best service!"</p><h4>- Ali Raza</h4></div>
-                <div class="review-card"><p class="text-pure-white">"I was skeptical first, but Canva Pro worked perfectly. Highly recommended."</p><h4>- Fatima K.</h4></div>
-                <div class="review-card"><p class="text-pure-white">"Pricing itni kam hai ke yakeen nahi aata. Super fast delivery."</p><h4>- Bilal Ahmed</h4></div>
-                <div class="review-card"><p class="text-pure-white">"ChatGPT Plus upgrade karwaya, Eshan bhai trustable banday hain."</p><h4>- Zainab M.</h4></div>
-                <div class="review-card"><p class="text-pure-white">"VPN smooth chal raha hai. Koi scam nahi hai, 100% legit."</p><h4>- Saad Tariq</h4></div>
-                <div class="review-card"><p class="text-pure-white">"Bhai maza aa gaya, Netflix premium instantly mil gaya. Best service!"</p><h4>- Ali Raza</h4></div>
-                <div class="review-card"><p class="text-pure-white">"I was skeptical first, but Canva Pro worked perfectly. Highly recommended."</p><h4>- Fatima K.</h4></div>
-                <div class="review-card"><p class="text-pure-white">"Pricing itni kam hai ke yakeen nahi aata. Super fast delivery."</p><h4>- Bilal Ahmed</h4></div>
-                <div class="review-card"><p class="text-pure-white">"ChatGPT Plus upgrade karwaya, Eshan bhai trustable banday hain."</p><h4>- Zainab M.</h4></div>
-                <div class="review-card"><p class="text-pure-white">"VPN smooth chal raha hai. Koi scam nahi hai, 100% legit."</p><h4>- Saad Tariq</h4></div>
-            </div>
-        </div>
-    </section>
-
-    <div class="zigzag-divider"></div>
-
-    <section class="faqs">
-        <h2 class="section-title text-pure-white">FREQUENTLY ASKED</h2>
-        <div class="faq-container">
-            <div class="faq-item">
-                <div class="faq-question"><h3 class="text-pure-white">Account band to nahi hoga?</h3> <i class="fa-solid fa-plus"></i></div>
-                <div class="faq-answer"><p>100% legal aur warranty ke sath dete hain. Koi block hone ki tension nahi, relax hoke use karein.</p></div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question"><h3 class="text-pure-white">Delivery mein kitna time lagta hai?</h3> <i class="fa-solid fa-plus"></i></div>
-                <div class="faq-answer"><p>Payment confirm hotay hi instantly WhatsApp par aapko details mil jayengi. No waiting.</p></div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question"><h3 class="text-pure-white">Payment methods konsay hain?</h3> <i class="fa-solid fa-plus"></i></div>
-                <div class="faq-answer"><p>Hum EasyPaisa, JazzCash, aur Bank Transfer accept karte hain for your convenience.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="pro-savage-cta">
-        <div class="cta-box scroll-card">
-            <div class="red-dot"></div>
-            <h1 class="cta-title text-pure-white">WEBSITE DEKHLI HAI TO<br>KUCH ORDER B KAR LO AB!</h1>
-            <p class="cta-sub">Join thousands of satisfied users. Stop scrolling, start saving.</p>
-            <a href="https://wa.me/923003154611?text=Hello%20Eshan!%20Website%20dekh%20li,%20ab%20mujhe%20order%20karna%20hai." target="_blank" class="btn-order-here">ORDER NOW <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-    </section>
-
-    <footer class="bottom-footer">
-        <p class="text-pure-white">© 2026 Eshan Store. All rights reserved.</p>
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="script.js"></script>
+    <section class="why-section section-space" id="why" aria-labelledby="why-title"><div class="why-intro"><p class="eyebrow reveal">02 / THE ESHAN DIFFERENCE</p><h2 id="why-title" class="reveal">Premium tools.<br>Personal touch<span class="red-text">.</span></h2><p class="reveal">An upgrade should be simple. From picking a plan to getting set up, we’re a message away.</p><a class="text-link reveal" href="https://wa.me/923003154611" target="_blank" rel="noopener noreferrer">Meet your next upgrade <span aria-hidden="true">↗</span></a></div><div class="benefits"><article class="benefit reveal"><span class="benefit-number">01</span><div><h3>Less waiting. More doing.</h3><p>Get your access details on WhatsApp after payment confirmation. Ask us for the delivery time for your plan.</p></div><span class="benefit-icon" aria-hidden="true">↗</span></article><article class="benefit reveal"><span class="benefit-number">02</span><div><h3>Support that feels human.</h3><p>A question before ordering? Need help setting up? Talk directly to us on WhatsApp.</p></div><span class="benefit-icon" aria-hidden="true">◎</span></article><article class="benefit reveal"><span class="benefit-number">03</span><div><h3>Good tools. Better value.</h3><p>Choose a plan that fits your needs and your budget, with EasyPaisa, JazzCash, or bank transfer.</p></div><span class="benefit-icon" aria-hidden="true">✳</span></article></div></section>
+    <section class="reviews-section section-space" id="reviews" aria-labelledby="reviews-title"><div class="section-top reveal"><p class="eyebrow">03 / WORD ON THE STREET</p><span class="section-note">FROM THE ESHAN COMMUNITY</span></div><div class="section-heading reveal"><h2 id="reviews-title">Don’t take our word.<br><span class="muted">Take theirs.</span></h2><div class="review-controls"><button id="review-prev" class="control-circle" aria-label="Previous review">←</button><button id="review-next" class="control-circle" aria-label="Next review">→</button></div></div><div class="review-window" id="review-window" tabindex="0" role="region" aria-label="Customer reviews, horizontally scrollable" data-lenis-prevent><div class="review-track"><figure class="review-card"><span class="quote-mark" aria-hidden="true">“</span><blockquote>Bhai maza aa gaya, Netflix premium instantly mil gaya. Best service!</blockquote><figcaption><span class="avatar">AR</span><span>Ali Raza<small>Entertainment</small></span></figcaption></figure><figure class="review-card"><span class="quote-mark" aria-hidden="true">“</span><blockquote>I was skeptical first, but Canva Pro worked perfectly. Highly recommended.</blockquote><figcaption><span class="avatar">FK</span><span>Fatima K.<small>AI & creative</small></span></figcaption></figure><figure class="review-card"><span class="quote-mark" aria-hidden="true">“</span><blockquote>Pricing itni kam hai ke yakeen nahi aata. Super fast delivery.</blockquote><figcaption><span class="avatar">BA</span><span>Bilal Ahmed<small>Eshan customer</small></span></figcaption></figure><figure class="review-card"><span class="quote-mark" aria-hidden="true">“</span><blockquote>ChatGPT Plus upgrade karwaya, Eshan bhai trustable banday hain.</blockquote><figcaption><span class="avatar">ZM</span><span>Zainab M.<small>AI & creative</small></span></figcaption></figure><figure class="review-card"><span class="quote-mark" aria-hidden="true">“</span><blockquote>VPN smooth chal raha hai. Koi scam nahi hai, 100% legit.</blockquote><figcaption><span class="avatar">ST</span><span>Saad Tariq<small>Premium VPNs</small></span></figcaption></figure></div></div><div class="review-meta"><span>GOOD TOOLS. HAPPY PEOPLE.</span><span id="review-position" aria-live="polite">01 — 05</span></div></section>
+    <section class="faq-section section-space" id="faq" aria-labelledby="faq-title"><div class="faq-intro reveal"><p class="eyebrow">04 / GOOD QUESTIONS</p><h2 id="faq-title">Let’s clear<br>things up<span class="red-text">.</span></h2><p>Still have something on your mind?</p><a href="https://wa.me/923003154611" class="text-link" target="_blank" rel="noopener noreferrer">Just ask us on WhatsApp <span aria-hidden="true">↗</span></a></div><div class="faq-list"><details class="faq-item reveal"><summary><span class="faq-number">01</span><h3>Account band to nahi hoga?</h3><span class="faq-plus" aria-hidden="true">+</span></summary><div class="faq-answer"><p>Har service ki apni terms hoti hain. Order se pehle account type, access rules aur warranty details WhatsApp par confirm kar lein. Agar access ka issue ho, humein message karein taake hum aapke plan ke mutabiq help kar sakein.</p></div></details><details class="faq-item reveal"><summary><span class="faq-number">02</span><h3>Delivery mein kitna time lagta hai?</h3><span class="faq-plus" aria-hidden="true">+</span></summary><div class="faq-answer"><p>Payment confirm hone ke baad access details WhatsApp par milti hain. Delivery time service aur availability par depend karta hai — payment se pehle apne plan ka time confirm kar lein.</p></div></details><details class="faq-item reveal"><summary><span class="faq-number">03</span><h3>Payment methods konsay hain?</h3><span class="faq-plus" aria-hidden="true">+</span></summary><div class="faq-answer"><p>Hum EasyPaisa, JazzCash aur Bank Transfer accept karte hain. Apna plan select karein aur verified payment details ke liye WhatsApp par message karein.</p></div></details></div></section>
+    <section class="final-cta" aria-labelledby="cta-title"><div class="cta-top"><span class="eyebrow">YOUR UPGRADE IS ONE MESSAGE AWAY</span><span aria-hidden="true">✳</span></div><h2 id="cta-title" class="reveal">LESS SCROLLING.<br>MORE <span class="cta-outline">LIVING.</span></h2><div class="cta-bottom"><p>Website dekh li?<br>Ab apni digital life upgrade kar lo.</p><a class="button button-dark magnetic" href="https://wa.me/923003154611?text=Hello%20Eshan!%20Website%20dekh%20li.%20Please%20help%20me%20choose%20a%20subscription." target="_blank" rel="noopener noreferrer">Let’s get you upgraded <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer><div class="footer-main"><a class="wordmark" href="#top"><span class="brand-mark" aria-hidden="true">e.</span><span>ESHAN<span class="brand-store">STORE</span></span></a><p>Premium tools. Everyday possibilities.</p><a class="back-top" href="#top">Back to top ↑</a></div><div class="footer-bottom"><span>© 2026 Eshan Store</span><span>Independent seller. Brand names belong to their respective owners.</span><button id="motion-toggle" aria-pressed="false" hidden>Pause motion</button></div></footer>
 </body>
 </html>
